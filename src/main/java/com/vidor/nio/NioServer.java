@@ -1,13 +1,10 @@
 package com.vidor.nio;
 
-import io.netty.buffer.ByteBuf;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.util.Iterator;
-import java.util.Set;
 
 public class NioServer {
     public static void main(String[] args) throws IOException {
