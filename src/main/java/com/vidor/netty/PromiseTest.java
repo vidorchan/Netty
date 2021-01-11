@@ -12,17 +12,17 @@ public class PromiseTest {
         EventExecutor executor = new DefaultEventExecutor();
         Promise promise = new DefaultPromise(executor);
 
-        promise.addListener((future -> {
+        promise.addListener((future) -> {
             if (future.isSuccess()) {
                 System.out.println("成功。。。"+future.get());
             } else {
                 System.out.println("失败。。。"+future.cause());
             }
 
-        }));
-        promise.addListener((future -> {
+        });
+        promise.addListener((future) -> {
             System.out.println("结束");
-        }));
+        });
 
         executor.submit(() -> {
             try {
